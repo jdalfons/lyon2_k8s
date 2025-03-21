@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/230328957202925271/757481e4661141379bb59364e339f87f/artifacts
+end_time: 1735031429630
+entry_point_name: ''
+experiment_id: '230328957202925271'
+lifecycle_stage: active
+run_id: 757481e4661141379bb59364e339f87f
+run_name: KNeighborsRegressor
+run_uuid: 757481e4661141379bb59364e339f87f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735031427983
+status: 3
+tags: []
+user_id: halcolo

@@ -1,0 +1,32 @@
+apiVersion: apps/v1  # Specifies the API version for the Deployment resource
+kind: Deployment  # Defines the type of Kubernetes resource (Deployment)
+metadata:
+  name: api-deploy  # Name of the Deployment
+spec:
+  replicas: 10  # Number of pod replicas to maintain
+  selector:
+    matchLabels:
+      app: api  # Label selector to identify the pods managed by this Deployment
+  minReadySeconds: 10  # Minimum time a pod should be ready before being considered available
+  strategy:
+    type: RollingUpdate  # Deployment strategy type (rolling updates)
+    rollingUpdate:
+      maxUnavailable: 1  # Maximum number of pods that can be unavailable during the update
+      maxSurge: 1  # Maximum number of extra pods that can be created during the update
+  template:  # Template for the pods managed by this Deployment
+    metadata:
+      labels:
+        app: api  # Labels applied to the pods
+    spec:
+      containers:
+      - name: api-pod  # Name of the container
+        image: api:0.1.0  # Docker image for the container
+        ports:
+        - containerPort: 8000  # Port exposed by the container
+        resources:  # Resource requests and limits for the container
+          limits:
+            memory: "512Mi"  # Maximum memory the container can use
+            cpu: "500m"  # Maximum CPU the container can use
+          requests:
+            memory: "256Mi"  # Minimum memory guaranteed for the container
+            cpu: "250m"  # Minimum CPU guaranteed for the container

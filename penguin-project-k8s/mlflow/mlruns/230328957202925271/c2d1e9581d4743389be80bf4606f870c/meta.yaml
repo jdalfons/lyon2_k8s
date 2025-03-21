@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/230328957202925271/c2d1e9581d4743389be80bf4606f870c/artifacts
+end_time: 1735031433599
+entry_point_name: ''
+experiment_id: '230328957202925271'
+lifecycle_stage: active
+run_id: c2d1e9581d4743389be80bf4606f870c
+run_name: ExtraTreesRegressor
+run_uuid: c2d1e9581d4743389be80bf4606f870c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735031431433
+status: 3
+tags: []
+user_id: halcolo
